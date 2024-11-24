@@ -54,7 +54,7 @@ const handleConnection = (s: WebSocket) => {
     });
     
     (async () => {
-        while (s.OPEN) {
+        while (true) {
             // Case 1: Send a message for each target
             for (const target of TARGETS) {
                 s.send(JSON.stringify(target))

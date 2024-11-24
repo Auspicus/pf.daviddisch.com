@@ -28,8 +28,8 @@ const PROFILE_TIME = 10_000;
 
   // start the profiling, with a path to the out file and screenshots collected
   await page.tracing.start({
-    path: `/tmp/traces/trace-${new Date().getTime()}.json`,
-    screenshots: true
+    path: `/tmp/trace-${new Date().getTime()}.json`,
+    screenshots: false
   });
 
   console.log('> Navigating to localhost:3000')
