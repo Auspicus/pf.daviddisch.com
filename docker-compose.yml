@@ -1,0 +1,25 @@
+version: '3'
+services:
+  backend:
+    build:
+      dockerfile: ./docker/backend.dockerfile
+      context: .
+    ports:
+      - 8000:8000
+  
+  frontend:
+    build:
+      dockerfile: ./docker/frontend.dockerfile
+      context: .
+    ports:
+      - 3000:3000
+
+  profiler:
+    build:
+      dockerfile: ./docker/profiler.dockerfile
+      context: .
+    volumes:
+      - ./traces:/tmp/traces
+    depends_on:
+      - backend
+      - frontend
