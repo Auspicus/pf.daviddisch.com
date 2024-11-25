@@ -1,13 +1,13 @@
 ## Case 1: 1024 WebSocket messages every 16ms containing 1 target
 
-| Device  | p95 time to screen (ms) | commits* (per second) | dropped (%) | shown (%) |
+| Device  | p95 time to screen (μs) | commits* (per second) | dropped (%) | shown (%) |
 |---|---|---|---|---|
 | MacBook Pro M1 (Low Power Mode)  | 54503  | 8.29513478338838  | 99.93% | 0.07% |
 | MacBook Pro M1 (Normal Mode)  | 29995  | 14.199860454098628 | 99.94% | 0.06% |
 
 ## Case 2: 1 WebSocket message every 16ms containing 1024 targets
 
-| Device  | p95 time to screen (ms) | commits* (per second) | dropped (%) | shown (%) |
+| Device  | p95 time to screen (μs) | commits* (per second) | dropped (%) | shown (%) |
 |---|---|---|---|---|
 | MacBook Pro M1 (Low Power Mode)  | 3836  | 55.88474939301838 | 0% | 100% |
 | MacBook Pro M1 (Normal Mode)  | 2599  | 57.28601341415711 | 0.17% | 99.83% |
@@ -15,7 +15,7 @@
 
 ## Case 2+3: 1 WebSocket message every 16ms containing 1024 targets (and slow render fn)
 
-| Device  | p95 time to screen (ms) | commits* (per second) | dropped (%) | shown (%) |
+| Device  | p95 time to screen (μs) | commits* (per second) | dropped (%) | shown (%) |
 |---|---|---|---|---|
 | MacBook Pro M1 (Low Power Mode)  | 10751  | 57.584662495691184 | 0.17% | 99.83% |
 | MacBook Pro M1 (Normal Mode)  | 6804  | 58.092110850965284 | 0.17% | 99.83% |
