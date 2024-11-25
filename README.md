@@ -48,3 +48,4 @@ related reading:
 - https://addyosmani.com/blog/profiling-react-js/
 - https://kentcdodds.com/blog/profile-a-react-app-for-performance
 - https://react.dev/learn/render-and-commit
+- https://blog.isquaredsoftware.com/2020/05/blogged-answers-a-mostly-complete-guide-to-react-rendering-behavior/#render-and-commit-phases
