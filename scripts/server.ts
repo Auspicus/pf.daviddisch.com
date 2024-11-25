@@ -56,14 +56,14 @@ const handleConnection = (s: WebSocket) => {
     (async () => {
         while (true) {
             // Case 1: Send a message for each target
-            for (const target of TARGETS) {
-                s.send(JSON.stringify(target))
-            }
+            // for (const target of TARGETS) {
+            //     s.send(JSON.stringify(target))
+            // }
     
             // Case 2: Send a message of all targets
-            // s.send(JSON.stringify({
-            //     targets: TARGETS.map((t) => targetToEvent(t))
-            // }))
+            s.send(JSON.stringify({
+                targets: TARGETS
+            }))
 
             await new Promise((res) => setTimeout(res, 1000 / TPS))
         }

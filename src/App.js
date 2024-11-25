@@ -2,7 +2,9 @@ import { Profiler, useEffect, useState } from 'react'
 import './App.css';
 
 const Targets = ({ targets }) => {
-  return targets.map((t) => <Target key={t.ref} x={t.x * 2} y={t.y * 2} />)
+  // Case 3: With slow render
+  for (let i = 0; i < 1e7; i++) {/* spin */}
+  return targets.map((t) => <div key={t.ref} className='target' style={{ left: t.x * 2, bottom: t.y * 2 }} />)
 }
 
 let updateId = 0
@@ -40,10 +42,10 @@ function App() {
       setPerformanceMark()
 
       // Case 1: Receive a message with 1 target
-      setTargets((tt) => [...tt.filter((t) => t.ref !== data.ref), data])
+      // setTargets((tt) => [...tt.filter((t) => t.ref !== data.ref), data])
 
       // Case 2: Receive a message with all targets
-      // setTargets(data.targets)
+      setTargets(data.targets)
     }
   }, [])
   
@@ -56,12 +58,6 @@ function App() {
       </div>
     </div>
   );
-}
-
-const Target = ({ x, y }) => {
-  return (
-    <div className='target' style={{ left: x, bottom: y }}></div>
-  )
 }
 
 export default App;
