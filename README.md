@@ -12,6 +12,14 @@
 | MacBook Pro M1 (Low Power Mode)  | 3836  | 55.88474939301838 | 0% | 100% |
 | MacBook Pro M1 (Normal Mode)  | 2599  | 57.28601341415711 | 0.17% | 99.83% |
 
+
+## Case 2+3: 1 WebSocket message every 16ms containing 1024 targets (and slow render fn)
+
+| Device  | p95 time to screen (ms) | commits (per second) | dropped (%) | shown (%) |
+|---|---|---|---|---|
+| MacBook Pro M1 (Low Power Mode)  | 10751  | 57.584662495691184 | 0.17% | 99.83% |
+| MacBook Pro M1 (Normal Mode)  | 6804  | 58.092110850965284 | 0.17% | 99.83% |
+
 ---
 
 target: dell 7230 tablet: intel i7 10 core cpu, 32gb ram, linux (ubuntu)
